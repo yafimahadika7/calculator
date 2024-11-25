@@ -81,7 +81,7 @@ function calculate() {
         result = parseFloat(previousInput) + parseFloat(currentInput);
     } else if (operator === '-') {
         result = parseFloat(previousInput) - parseFloat(currentInput);
-    } else if (operator === '×') {
+    } else if (operator === 'x') {
         result = parseFloat(previousInput) * parseFloat(currentInput);
     } else if (operator === '/') {
         result = parseFloat(previousInput) / parseFloat(currentInput);
