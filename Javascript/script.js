@@ -1,19 +1,17 @@
-// ******************* VIEW FUNCTIONS ******************* //
 function switchThemeTo(theme) {
-  let toggle = document.getElementById("theme-toggle");
-  if (toggle.classList.contains("t-" + theme)) return;
-  toggle.classList.remove("t-1");
-  toggle.classList.remove("t-2");
-  toggle.classList.remove("t-3");
-  toggle.classList.add("t-" + theme);
-  document.body.classList.remove("theme-1");
-  document.body.classList.remove("theme-2");
-  document.body.classList.remove("theme-3");
-  document.body.classList.add("theme-" + theme);
-}
+    let toggle = document.getElementById("theme-toggle");
+    if (toggle.classList.contains("t-" + theme)) return;
+    toggle.classList.remove("t-1");
+    toggle.classList.remove("t-2");
+    toggle.classList.remove("t-3");
+    toggle.classList.add("t-" + theme);
+    document.body.classList.remove("theme-1");
+    document.body.classList.remove("theme-2");
+    document.body.classList.remove("theme-3");
+    document.body.classList.add("theme-" + theme);
+  }
 
-// Menangani input dan operasi kalkulator
-let screen = document.querySelector('.screen');
+  let screen = document.querySelector('.screen');
 let currentInput = '0';
 let previousInput = '';
 let operator = null;
@@ -81,7 +79,7 @@ function calculate() {
         result = parseFloat(previousInput) + parseFloat(currentInput);
     } else if (operator === '-') {
         result = parseFloat(previousInput) - parseFloat(currentInput);
-    } else if (operator === 'x') {
+    } else if (operator === '×') {
         result = parseFloat(previousInput) * parseFloat(currentInput);
     } else if (operator === '/') {
         result = parseFloat(previousInput) / parseFloat(currentInput);

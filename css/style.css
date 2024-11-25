@@ -11,25 +11,26 @@
 }
 
 body {
-    width: 100%;
-    min-height: 100vh;
     display: flex;
     align-items: center;
     justify-content: center;
-    padding: 40px;
+    padding: 0;
 }
 /* **************** GENERAL CSS (END) **************** */
 
 
 /* **************** CONTAINER CSS (START) **************** */
 .container {
-    width: 540px;
+    width: 480px;
+    transform: scale(0.9); /* Mengecilkan ukuran ke 90% */
+    transform-origin: center top; /* Mengatur titik asal scaling agar tetap rata */
 }
 /* **************** CONTAINER CSS (END) **************** */
 
 
 /* **************** CALC HEADER CSS (START) **************** */
 .container .header {
+    margin-top: 100px;
     width: 100%;
     display: flex;
     align-items: center;
@@ -111,10 +112,10 @@ body {
 /* **************** CALC SCREEN CSS (START) **************** */
 .container .screen {
     width: 100%;
-    padding: 40px;
+    padding: 20px;
     border-radius: 10px;
     font-weight: bold;
-    font-size: 56px;
+    font-size: 48px;
     margin-top: 32px;
     display: flex;
     justify-content: flex-end;
@@ -128,14 +129,13 @@ body {
     height: 480px;
     display: grid;
     grid-template-columns: repeat(4, minmax(60px, 101px));
-    grid-template-rows: repeat(5, 64px);
+    grid-template-rows: repeat(5, 50px);
     align-content: space-between;
     margin-top: 24px;
-    padding: 32px 30px;
+    padding: 16px 30px;
     border-radius: 10px;
-    column-gap: 26px;
-    backdrop-filter: blur(2px);
-    background-color: rgba(255, 255, 255, 0.2);
+    column-gap: 16px;
+    row-gap: 10px;
 }
 
 .container .keys .key {
@@ -145,10 +145,11 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    padding-top: 5px;
-    border-radius: 10px;
+    padding-top: 3px;
+    border-radius: 5px;
     cursor: pointer;
     text-transform: uppercase;
+    margin-top: -20px;
 }
 
 .container .keys .key.col-span-2 {
@@ -176,16 +177,21 @@ body.theme-1 {
     height: 100vh;
 }
 
+body.theme-1 .container {
+    transform: scale(0.9); /* Sesuaikan nilai untuk ukuran yang diinginkan */
+    transform-origin: top center; /* Menjaga posisi tetap di tengah atas */
+}
+
 body.theme-1 .container .header .logo {
-    color: 36362C;
+    color: #36362C;
 }
 
 body.theme-1 .container .header .theme-div > span {
-    color: 36362C;
+    color: #36362C;
 }
 
 body.theme-1 .container .header .theme-div .toggle-switch {
-    background-color: #242D44;
+    background-color: #D2CDCD;
 }
 
 body.theme-1 .container .header .theme-div .toggle-switch > .labels span {
@@ -193,22 +199,22 @@ body.theme-1 .container .header .theme-div .toggle-switch > .labels span {
 }
 
 body.theme-1 .container .header .theme-div .toggle-switch::before {
-    background-color: #D03F2F;
+    background-color: #C85402;
 }
 
 body.theme-1 .container .header .theme-div .toggle-switch:hover::before {
-    background-color: #F96B5B;
+    background-color: #FF8A38;
 }
 
 body.theme-1 .container .screen {
     color: #36362C;
-    background-color: #181F33;
+    background-color: #EEEEEE;
     backdrop-filter: blur(5px); /* Menambahkan efek blur */
     background-color: rgba(255, 255, 255, 0.2);
 }
 
 body.theme-1 .container .keys {
-    background-color: #242D44;
+    background-color: #D2CDCD;
     backdrop-filter: blur(5px); /* Menambahkan efek blur */
     background-color: rgba(255, 255, 255, 0.2);
 }
@@ -224,23 +230,23 @@ body.theme-1 .container .keys .key:hover {
 }
 
 body.theme-1 .container .keys .key.custom-1 {
-    background-color: #647198;
-    box-shadow: inset 0 -4px 0 0 #414E73;
+    background-color: #378187;
+    box-shadow: inset 0 -4px 0 0 #1B6066;
     color: white;
 }
 
 body.theme-1 .container .keys .key.custom-1:hover {
-    background-color: #A2B2E1;
+    background-color: #62B5BC;
 }
 
 body.theme-1 .container .keys .key.equal {
-    background-color: #D03F2F;
-    box-shadow: inset 0 -4px 0 0 #93261A;
+    background-color: #C85402;
+    box-shadow: inset 0 -4px 0 0 #873901;
     color: white;
 }
 
 body.theme-1 .container .keys .key.equal:hover {
-    background-color: #F96B5B;
+    background-color: #FF8A38;
 }
 /* **************** THEME 1 CSS (END) **************** */
 
@@ -255,16 +261,21 @@ body.theme-2 {
     height: 100vh;
 }
 
+body.theme-2 .container {
+    transform: scale(0.9); /* Sesuaikan nilai untuk ukuran yang diinginkan */
+    transform-origin: top center; /* Menjaga posisi tetap di tengah atas */
+}
+
 body.theme-2 .container .header .logo {
-    color: 36362C;
+    color: #36362C;
 }
 
 body.theme-2 .container .header .theme-div > span {
-    color: 36362C;
+    color: #36362C;
 }
 
 body.theme-2 .container .header .theme-div .toggle-switch {
-    background-color: #242D44;
+    background-color: #D2CDCD;
 }
 
 body.theme-2 .container .header .theme-div .toggle-switch > .labels span {
@@ -272,22 +283,22 @@ body.theme-2 .container .header .theme-div .toggle-switch > .labels span {
 }
 
 body.theme-2 .container .header .theme-div .toggle-switch::before {
-    background-color: #D03F2F;
+    background-color: #C85402;
 }
 
 body.theme-2 .container .header .theme-div .toggle-switch:hover::before {
-    background-color: #F96B5B;
+    background-color: #FF8A38;
 }
 
 body.theme-2 .container .screen {
     color: #36362C;
-    background-color: #181F33;
+    background-color: #EEEEEE;
     backdrop-filter: blur(5px); /* Menambahkan efek blur */
     background-color: rgba(255, 255, 255, 0.2);
 }
 
 body.theme-2 .container .keys {
-    background-color: #242D44;
+    background-color: #D2CDCD;
     backdrop-filter: blur(5px); /* Menambahkan efek blur */
     background-color: rgba(255, 255, 255, 0.2);
 }
@@ -303,23 +314,23 @@ body.theme-2 .container .keys .key:hover {
 }
 
 body.theme-2 .container .keys .key.custom-1 {
-    background-color: #647198;
-    box-shadow: inset 0 -4px 0 0 #414E73;
+    background-color: #378187;
+    box-shadow: inset 0 -4px 0 0 #1B6066;
     color: white;
 }
 
 body.theme-2 .container .keys .key.custom-1:hover {
-    background-color: #A2B2E1;
+    background-color: #62B5BC;
 }
 
 body.theme-2 .container .keys .key.equal {
-    background-color: #D03F2F;
-    box-shadow: inset 0 -4px 0 0 #93261A;
+    background-color: #C85402;
+    box-shadow: inset 0 -4px 0 0 #873901;
     color: white;
 }
 
 body.theme-2 .container .keys .key.equal:hover {
-    background-color: #F96B5B;
+    background-color: #FF8A38;
 }
 /* **************** THEME 2 CSS (END) **************** */
 
@@ -334,16 +345,21 @@ body.theme-3 {
     height: 100vh;
 }
 
+body.theme-3 .container {
+    transform: scale(0.9); /* Sesuaikan nilai untuk ukuran yang diinginkan */
+    transform-origin: top center; /* Menjaga posisi tetap di tengah atas */
+}
+
 body.theme-3 .container .header .logo {
-    color: 36362C;
+    color: #36362C;
 }
 
 body.theme-3 .container .header .theme-div > span {
-    color: 36362C;
+    color: #36362C;
 }
 
 body.theme-3 .container .header .theme-div .toggle-switch {
-    background-color: #242D44;
+    background-color: #D2CDCD;
 }
 
 body.theme-3 .container .header .theme-div .toggle-switch > .labels span {
@@ -351,22 +367,22 @@ body.theme-3 .container .header .theme-div .toggle-switch > .labels span {
 }
 
 body.theme-3 .container .header .theme-div .toggle-switch::before {
-    background-color: #D03F2F;
+    background-color: #C85402;
 }
 
 body.theme-3 .container .header .theme-div .toggle-switch:hover::before {
-    background-color: #F96B5B;
+    background-color: #FF8A38;
 }
 
 body.theme-3 .container .screen {
     color: #36362C;
-    background-color: #181F33;
+    background-color: #EEEEEE;
     backdrop-filter: blur(5px); /* Menambahkan efek blur */
     background-color: rgba(255, 255, 255, 0.2);
 }
 
 body.theme-3 .container .keys {
-    background-color: #242D44;
+    background-color: #D2CDCD;
     backdrop-filter: blur(5px); /* Menambahkan efek blur */
     background-color: rgba(255, 255, 255, 0.2);
 }
@@ -382,22 +398,22 @@ body.theme-3 .container .keys .key:hover {
 }
 
 body.theme-3 .container .keys .key.custom-1 {
-    background-color: #647198;
-    box-shadow: inset 0 -4px 0 0 #414E73;
+    background-color: #378187;
+    box-shadow: inset 0 -4px 0 0 #1B6066;
     color: white;
 }
 
 body.theme-3 .container .keys .key.custom-1:hover {
-    background-color: #A2B2E1;
+    background-color: #62B5BC;
 }
 
 body.theme-3 .container .keys .key.equal {
-    background-color: #D03F2F;
-    box-shadow: inset 0 -4px 0 0 #93261A;
+    background-color: #C85402;
+    box-shadow: inset 0 -4px 0 0 #873901;
     color: white;
 }
 
 body.theme-3 .container .keys .key.equal:hover {
-    background-color: #F96B5B;
+    background-color: #FF8A38;
 }
 /* **************** THEME 3 CSS (END) **************** */
